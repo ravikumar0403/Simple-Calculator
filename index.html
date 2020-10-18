@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="calculator-grid">
+        <div id="prev"></div>
+        <div id="current"></div>
+        <table class="button-container">
+            <tr>
+                <td><input type="button" value="Clear" onclick="delAll()"></td>
+                <td><input type="button" value="Del" onclick="del()"></td>
+                <td><input type="button" value="/" onclick="getInput('/')"></td>
+                <td><input type="button" value="*" onclick="getInput('*')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="getInput('7')"></td>
+                <td><input type="button" value="8" onclick="getInput('8')"></td>
+                <td><input type="button" value="9" onclick="getInput('9')"></td>
+                <td><input type="button" value="-" onclick="getInput('-')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="getInput('4')"></td>
+                <td><input type="button" value="5" onclick="getInput('5')"></td>
+                <td><input type="button" value="6" onclick="getInput('6')"></td>
+                <td><input type="button" value="+" onclick="getInput('+')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" onclick="getInput('1')"></td>
+                <td><input type="button" value="2" onclick="getInput('2')"></td>
+                <td><input type="button" value="3" onclick="getInput('3')"></td>
+                <td rowspan=2><input id="equals" type="button" value="=" onclick="getResult(current)"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="0" onclick="getInput('0')"></td>
+                <td><input type="button" value="00" onclick="getInput('00')"></td>
+                <td><input type="button" value="." onclick="getInput('.')"></td>
+            </tr>
+        </table>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
