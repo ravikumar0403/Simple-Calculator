@@ -2,13 +2,16 @@ current = document.getElementById('current')
 prev = document.getElementById('prev')
 
 function getInput(value){
-    if(value)
-    current.innerText += value;
+    if(current.innerText==0 || current.innerText == 'ERROR'){
+      current.innerText = value;
+    }else{
+      current.innerText += value;
+    }
 }
 
 function delAll(){
-    current.innerText = '';
-    prev.innerText = '';
+    current.innerText = '0';
+    prev.innerText = '0';
 }
 
 function del(){
